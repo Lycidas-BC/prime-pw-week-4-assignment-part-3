@@ -4,6 +4,8 @@ console.log('***** Cart Functions *****');
 
 //Create a global variable named `basket` and set it to an empty array
 let basket = [];
+//Add a global `const` named `maxItems` and set it to 5.
+const maxItems = 5;
 
 //Create a function called `addItem`
 function addItem( item ){
@@ -18,6 +20,13 @@ function addItem( item ){
   return true;
 } //end addItem
 
+function empty(){
+  console.log(`empty - basket is: ${basket}`);
+  //reset the `basket` to an empty array
+  basket = [];
+  console.log(`empty - final basket is: ${basket}`);
+} //end empty
+
 //Create a function called `listItems`
 function listItems() {
   console.log(`listItems - basket is: ${basket}`);
@@ -28,12 +37,7 @@ function listItems() {
   }
 } //end listItems
 
-function empty(){
-  console.log(`empty - basket is: ${basket}`);
-  //reset the `basket` to an empty array
-  basket = [];
-  console.log(`empty - final basket is: ${basket}`);
-} //end empty
+
 
 // testing!
 listItems();
