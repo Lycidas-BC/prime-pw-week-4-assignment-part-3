@@ -10,9 +10,9 @@ This week we'll be pulling together all of the Javascript techniques you've lear
 - functions
 - HTML & CSS
 
-## Assignment - Cart System 
+## Assignment - Cart System
 
-In this section we will write some functions that might be used in a simple cart system for a store. 
+In this section we will write some functions that might be used in a simple cart system for a store.
 
 ### Required Features
 Update the `cart.js` file to do the following:
@@ -21,7 +21,7 @@ Update the `cart.js` file to do the following:
 
 - Create a function called `addItem`. It should:
   - take an input parameter for a string `item`
-  - add the new item to the global array `basket`. 
+  - add the new item to the global array `basket`.
   - return `true` indicating the item was added
 
 - Create a function called `listItems`. It should:
@@ -41,7 +41,7 @@ console.log('Adding apples (expect true)', addItem('apples'));
 console.log(`Basket is now ${basket}`);
 ```
 
-### Stretch Goals 
+### Stretch Goals
 Remember that Stretch Goals are not required, but will help you to further develop concepts from the skills we have covered.
 
 __Using functions in other functions!__
@@ -53,7 +53,7 @@ __Using functions in other functions!__
   - return `true` otherwise (equal or more than maxItems)
 
 3. Update the required `addItem` function to:
-  - Use the `isFull` function to prevent more than `maxItems` from being added to the basket. 
+  - Use the `isFull` function to prevent more than `maxItems` from being added to the basket.
   - If an item was added to the array, return `true`
   - If there was no room and the item could not be added return `false`
 
