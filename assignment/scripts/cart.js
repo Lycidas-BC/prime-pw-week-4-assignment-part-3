@@ -7,16 +7,20 @@ let basket = [];
 
 //Create a function called `addItem`
 function addItem( item ){
+  console.log(`addItem - basket is: ${basket}`);
 
   //add the new item to the global array `basket`.
+  console.log(`addItem - adding item: ${item}`);
   basket.push(item);
 
   //return `true` indicating the item was added
+  console.log(`addItem - basket is now: ${basket}`);
   return true;
 } //end addItem
 
 //Create a function called `listItems`
 function listItems() {
+  console.log(`listItems - basket is: ${basket}`);
   //loop over the items in the `basket` array
   for(let item of basket){
     //console.log each individual item on a new line
@@ -25,6 +29,25 @@ function listItems() {
 } //end listItems
 
 function empty(){
+  console.log(`empty - basket is: ${basket}`);
   //reset the `basket` to an empty array
   basket = [];
+  console.log(`empty - final basket is: ${basket}`);
 } //end empty
+
+// testing!
+listItems();
+console.log(`should return true: ${addItem('apple')}`);
+listItems();
+addItem('eggs');
+listItems();
+addItem('butter');
+listItems();
+addItem('flour');
+listItems();
+addItem('scotch');
+listItems();
+addItem('pineapple');
+empty();
+listItems();
+addItem('apple');
