@@ -15,13 +15,20 @@ const maxItems = 5;
 function addItem( item ){
   console.log(`addItem - basket is: ${basket}, item is ${item}`);
 
-  //add the new item to the global array `basket`.
-  console.log(`addItem - adding item: ${item}`);
-  basket.push(item);
+  //update addItem to use isFull to prevent adding more than maxItems
+  if(!isFull()){
+    //add the new item to the global array `basket`.
+    console.log(`addItem - adding item: ${item}`);
+    basket.push(item);
 
-  //return `true` indicating the item was added
-  console.log(`addItem - basket is now: ${basket}`);
-  return true;
+    //return `true` indicating the item was added
+    console.log(`addItem - basket is now: ${basket}`);
+    return true;
+  }
+
+  // if there was no room and the item could not be added, return false
+  console.log(`addItem - basket is full. ${item} was not added`);
+  return false;
 } //end addItem
 
 //Create a function called `empty`.
@@ -59,19 +66,20 @@ function listItems() {
 
 // testing!
 listItems();
-console.log(`should return true: ${addItem('apple')}`);
+console.log(addItem('apple'));
 listItems();
-addItem('eggs');
+console.log(addItem('eggs'));
 listItems();
-addItem('butter');
+console.log(addItem('butter'));
 listItems();
-addItem('flour');
+console.log(addItem('flour'));
 listItems();
 console.log(`Is basket full (should be false): ${isFull()}`);
-addItem('scotch');
+console.log(addItem('scotch'));
 listItems();
 console.log(`Is basket full (should be true): ${isFull()}`);
-addItem('pineapple');
+console.log(addItem('pineapple'));
+listItems();
 empty();
 listItems();
 addItem('apple');
