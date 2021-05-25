@@ -24,7 +24,7 @@ function addItem( item ){
     //return `true` indicating the item was added
     console.log(`addItem - basket is now: ${basket}`);
     return true;
-  }
+  } //end addItem
 
   // if there was no room and the item could not be added, return false
   console.log(`addItem - basket is full. ${item} was not added`);
@@ -62,7 +62,21 @@ function listItems() {
   }
 } //end listItems
 
-
+//Create a function called `removeItem`
+function removeItem( item ) {
+  //use array.indexOf to find the index of the first matching item in the basket.
+  let itemIndex = basket.indexOf(item);
+  //make sure item is in array
+  if ( itemIndex >= 0 ) {
+    //use array.splice to remove the first matching item from the basket.
+    basket.splice(itemIndex, 1);
+    //return removed item
+    return item;
+  } else {
+    //item is not in array. return null
+    return null;
+  }
+} //end removeItem
 
 // testing!
 listItems();
